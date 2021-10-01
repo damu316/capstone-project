@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <!-- Navbar Component -->
-  <header class="navbar navbar-expand-md " style="margin-left: 24px; margin-right: 24px;" >
+  <header class="navbar navbar-expand-md " style="margin-left: 16px; margin-right: 16px;" >
   
     <span class="collapse navbar-brand navbar-collapse" >
     <img src="./capstone_colmar_assets/images/ic-lion.svg" class="d-inline-block align-top" alt="brand name adhac">
@@ -20,6 +20,9 @@
     
     <div class="collapse navbar-collapse justify-content-end" >
       <ul class="navbar-nav mr-auto nav ">
+        <li class=" nav-item ">
+          <a class="nav-link" href="./colmar-academy-spec.png">Site spec</a>
+        </li>
         <li class=" nav-item ">
           <a class="nav-link" href="#">On campus</a>
         </li>
@@ -35,20 +38,23 @@
       </ul>
     </div>
     
-    <nav class=" container-fluid d-flex justify-content-between d-md-none ">
+    <nav class=" container-fluid d-flex fixed-top bg-white justify-content-between d-md-none ">
       
       <a class="nav-link" href="#"> <img src="./capstone_colmar_assets/images/ic-lion.svg" ></a>
       <a class="nav-link" href="#"> <img src="./capstone_colmar_assets/images/ic-on-campus.svg" ></a>
       <a class="nav-link" href="#"> <img src="./capstone_colmar_assets/images/ic-online.svg" ></a>
       <a class="nav-link" href="#"> <img src="./capstone_colmar_assets/images/ic-login.svg" ></a>
     </nav>
+    <div class=" container-fluid my-3  bg-white d-md-none "></div>
+      <!--top margin-->
+    </div>
 
-    
   </header>
   <body>
+    
 <!-- banner-->
     
-  <div class="row border  align-items-center" style="padding: 16px; background-color: rgb(187, 182, 182);">
+  <div class="row border align-items-center" style="padding: 16px; background-color: rgb(187, 182, 182);">
     <div class="col-md-7">
       <img src="./capstone_colmar_assets/images/banner.jpg" class="img-fluid rounded" >
     </div>
@@ -76,7 +82,11 @@
       
       <div class="row  align-items-center" style="margin: 16px 0 16px 16px;">
         <div class="col-md-4">
-          <img src="./capstone_colmar_assets/images/information-orientation.jpg" class="img-fluid rounded-start" >
+          <picture class="img-fluid" >
+            <source srcset="./capstone_colmar_assets/images/information-orientation.jpg"
+                    media="(min-width: 720px)">
+            <img class="img-fluid py-2 rounded-2" src="./capstone_colmar_assets/images/information-orientation-mobile.jpg" >
+        </picture>
         </div>
         <div class="col-md-8">
           <div class="card-body ">
@@ -88,7 +98,11 @@
       </div>
       <div class="row border align-items-center" style="margin: 16px 0 16px 16px;">
         <div class="col-md-4">
-          <img src="./capstone_colmar_assets/images/information-campus.jpg" class="img-fluid" >
+          <picture class="img-fluid" >
+            <source srcset="./capstone_colmar_assets/images/information-campus.jpg"
+                    media="(min-width: 720px)">
+            <img class="img-fluid py-2 rounded-2" src="./capstone_colmar_assets/images/information-campus-mobile.jpg" >
+          </picture>  
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -100,7 +114,11 @@
       </div>
       <div class="row border  align-items-center" style="margin: 16px 0 16px 16px; background-color: rgb(187, 182, 182);">
         <div class="col-md-4">
-          <img src="./capstone_colmar_assets/images/information-guest-lecture.jpg" class="img-fluid rounded-start" >
+          <picture class="img-fluid" >
+            <source srcset="./capstone_colmar_assets/images/information-guest-lecture.jpg"
+                    media="(min-width: 720px)">
+            <img class="img-fluid py-2 rounded-2" src="./capstone_colmar_assets/images/information-guest-lecture-mobile.jpg" >
+          </picture>
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -186,27 +204,16 @@
   <div class="row d-md-none" >
     <h2 class=" text-center fw-bold" style="padding: 32px 0 16px 0;">Start learning</h2>        
   </div>
-  <div class="row d-md-none">
-    <div class="col">
-      <div class="row  bg-secondary " style="padding: 16 0px ;margin: 16px ;">
-        <p class="text-left align-middle text-white" style="padding: 16 0px ;">Software engineering</p>
-      </div>
-      <div class="row  bg-secondary " style="padding: 16 0px ;margin: 16px ;">
-        <p class="text-left align-middle text-white" style="padding: 16 0px ;">Computer art</p>
-      </div>
-      <div class="row  bg-secondary " style="padding: 16 0px ;margin: 16px ;">
-        <p class="text-left align-middle text-white" style="padding: 16 0px ;">Design</p>
-      </div>
-      <div class="row  bg-secondary " style="padding: 16 0px ;margin: 16px ;">
-        <p class="text-left align-middle text-white" style="padding: 16 0px ;">Data</p>
-      </div>
-      <div class="row  bg-secondary " style="padding: 16 0px ;margin: 16px ;">
-        <p class="text-left align-middle text-white" style="padding: 16 0px ;">Business</p>
-      </div>
-      <div class="row  bg-secondary " style="padding: 16 0px ;margin: 16px ;">
-        <p class="text-left align-middle text-white" style="padding: 16 0px ;">Marketing</p>
-      </div>
-    </div>
+  <div>
+    <ul class="row fw-bold fs-4 d-md-none list-group font" style="margin: 24px;">
+    
+      <li class="list-group-item rounded-2 fs-4">Software engineering</li>
+      <li class="list-group-item rounded-2">Computer art</li>
+      <li class="list-group-item rounded-2">Design</li>
+      <li class="list-group-item rounded-2">Data</li>  
+      <li class="list-group-item rounded-2">Business</li>
+      <li class="list-group-item rounded-2">Marketing</li>
+    </ul>
     
   </div>
   <!-- Thesis exhibit-->
@@ -215,9 +222,12 @@
   </div>
   <div class="row border justify-content-center" style="padding: 32px 24px ; background-color: rgb(236, 231, 231);">
     <div class="col-7 ">
-      <div class="row">
-        <video src="./capstone_colmar_assets/videos/thesis.mp4" height="60%" width="100%" controls ></video>
-      </div>
+      <div class="row" >
+        <div class="ratio ratio-16x9">
+          <iframe src="./capstone_colmar_assets/videos/thesis.mp4" controls allowfullscreen></iframe>
+        </div>
+        
+      </div> 
       <div class="row d-sm-none d-none d-md-block">
         <h3 class="card-title fw-bold " style="margin: 32px 16px 16px;">Reimagine urban</h3>
         <p class="card-text">"Curabitur vitale libero in ipsum portitor con Some quick example text to build on the card title and make up the bulk of the card's content.

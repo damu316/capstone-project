@@ -10,3 +10,10 @@ div a {
   margin: 8px auto;
   padding: 8px auto;
 }
+
+.list-group-item {
+  background-color: rgb(236, 231, 231);
+  padding: 16px 16px 24px 16px;
+  margin: 8px 0px;
+  
+}
